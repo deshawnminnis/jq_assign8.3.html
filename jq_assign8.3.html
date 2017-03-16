@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Form</title>
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+<!--scripts using jquery to hide and show input fields-->
+         <script>
+                 var hideInput = function(){
+                 $("input").hide();
+
+                 }
+         </script>
+         <script>
+                 var showInput = function(){
+                 $("input").show();
+
+                 }
+         </script>
+
+    <link href="jq_assign8.1.css" rel="stylesheet" />
+</head>
+<header id="main-header"></header>
+
+<body>
+    <h1>Enter the system</h1>
+    <p1>It is necessary to login to your account in order to sign up for a course.</p1>
+    <br><br>
+    <button onclick="hideInput();">Hide input fields</button>
+    <button onclick="showInput();">Show input fields</button>
+        <br>
+        <br>
+        <Form>
+            <div class="container">
+                <!--left column fields for new user registration-->
+                <div class="left-col">
+                    <h2>Are You New?</h2>
+                    <h3><a href="#">Register</a></h3>
+                    <div>
+                        <label for="userName"></label>
+                        <input type="text" id="name" required placeholder="User name" class="reg-fields">
+                        <br><br>
+                    </div>
+                    <div>
+                        <label for="userEmail"></label>
+                        <input type="text" id="email" required placeholder="Email" class="reg-fields">
+                        <br><br>
+                    </div>
+                    <div>
+                        <label for="password"></label>
+                        <input type="text" id="pswd_1" required placeholder="Password" class="reg-fields">
+                        <br><br>
+                    </div>
+                    <div>
+                        <label for="confirmPswd"></label>
+                        <input type="text" id="conf_pswd" required placeholder="Confirm password" class="reg-fields">
+                        <br><br>
+                    </div>
+                    <div>
+                        <button id="myBtn">Register</button>
+                    </div>
+                </div>
+                <!--right column fields for registered students-->
+                <div class="right-col">
+                    <h3>Already A Student? Login</h3>
+                    <div>
+                        <input type="text" id="name2" placeholder="User name" class="student-login">
+                    </div>
+                    <br><br>
+                    <div>
+                        <input type="text" id="pswd_2" placeholder="Password" class="student-login">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="remb_me" value="chk_rem_me">Remember me
+                        <button id="login-btn">Login</button>
+                        <br><br>
+                        <p1 id="forgot-pass"><a href="#">Forgot Password</a></p1>
+                    </div>
+                </div>
+            </div>
+        </Form>
+</body>
+
+</html>
